@@ -1,5 +1,9 @@
 # Grupo Inmarca Landing Page
 
+<p align="center">
+   <img src="docs/screenshot.png" alt="Screenshot de la landing page" width="800" />
+</p>
+
 Este proyecto contiene:
 - **frontend/**: Aplicación React para la landing page.
 - **backend/**: Backend PHP para formularios y manejo de datos.
@@ -28,4 +32,4 @@ Landing page para Grupo Inmarca, distribuidora y representante oficial de marcas
 
 ---
 
-Desarrollado por Grupo Inmarca, 2025.
+Desarrollado por Nicolas Cartin, 2025.
