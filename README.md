@@ -1,7 +1,7 @@
 
 # Grupo Inmarca Landing Page
 
-[🌐 Visita el sitio web real](https://grupoinmarca.com/)
+[Sitio Web](https://grupoinmarca.com/)
 
 <p align="center">
    <img src="docs/screenshot.png" alt="Screenshot de la landing page" width="800" />
