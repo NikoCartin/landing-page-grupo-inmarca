@@ -1,27 +1,31 @@
-
 # Grupo Inmarca Landing Page
 
-[Sitio Web](https://grupoinmarca.com/)
+[Live website](https://grupoinmarca.com/)
 
 <p align="center">
-   <img src="docs/screenshot.png" alt="Screenshot de la landing page" width="800" />
+   <img src="docs/screenshot.png" alt="Landing page screenshot" width="800" />
 </p>
 
-Este proyecto contiene:
-- **frontend/**: Aplicación React para la landing page.
-- **backend/**: Backend PHP para formularios y manejo de datos.
+## Project Structure
 
-## Cómo iniciar
+- **frontend/**: React application for the landing page.
+- **backend/**: PHP backend for form handling and data processing.
+
+## Getting Started
 
 ### Frontend (React)
-1. Ve a la carpeta `frontend`:
+
+1. Open the `frontend` directory:
+
    ```sh
    cd frontend
    npm start
    ```
 
 ### Backend (PHP)
-1. Ve a la carpeta `backend` y ejecuta un servidor PHP:
+
+1. Open the `backend` directory and start a PHP development server:
+
    ```sh
    cd backend
    php -S localhost:8000
@@ -29,10 +33,10 @@ Este proyecto contiene:
 
 ---
 
-## Especificaciones
+## Project Details
 
-Landing page para Grupo Inmarca, distribuidora y representante oficial de marcas de ropa brasileña en Costa Rica. Incluye información institucional, comercial, contacto y políticas.
+Landing page for Grupo Inmarca, an official distributor and representative of Brazilian clothing brands in Costa Rica. The site includes institutional information, commercial details, contact functionality, and company policies.
 
 ---
 
-Desarrollado por Nicolas Cartin, 2025.
+Developed by Nicolas Cartin Reyes, 2025.
