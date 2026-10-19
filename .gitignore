@@ -1,0 +1,7 @@
+/backend/config.php
+/backend/.env
+/.env
+/node_modules/
+__pycache__/
+*.py[cod]
+*.zip

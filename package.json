@@ -1,7 +1,0 @@
-{
-  "name": "website-inmarca",
-  "private": true,
-  "workspaces": [
-    "frontend"
-  ]
-}

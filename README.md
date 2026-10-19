@@ -1,42 +1,52 @@
 # Grupo Inmarca Landing Page
 
-[Live website](https://grupoinmarca.com/)
+Responsive website for Grupo Inmarca, the Costa Rican distributor of Brazilian fashion brands.
+
+- Live website: https://grupoinmarca.com/
+- Project source: https://github.com/NikoCartin/landing-page-grupo-inmarca
+- Lead Developer: Nicolas Cartin Reyes
 
 <p align="center">
-   <img src="docs/screenshot.png" alt="Landing page screenshot" width="800" />
+  <a href="https://grupoinmarca.com/">
+    <img src="docs/screenshot.png" alt="Grupo Inmarca website homepage" width="100%" />
+  </a>
 </p>
 
-## Project Structure
+## Project structure
 
-- **frontend/**: React application for the landing page.
-- **backend/**: PHP backend for form handling and data processing.
+- `index.html`, `styles.css`, `site.js`: responsive static landing page and interactive brand carousel.
+- `privacy.js`, `analytics-config.js`: visitor consent controls and consent-gated analytics configuration.
+- `assets/`: local brand logos, campaign photography, icons and page imagery.
+- `backend/index.php`: same-origin JSON contact endpoint using PHPMailer.
+- `backend/PHPMailer/`: PHPMailer library files.
+- `backend/config.example.php`: SMTP configuration template. The live `backend/config.php` is intentionally excluded from Git.
+- `.htaccess`, `robots.txt`, `sitemap.xml`: Hostinger routing and crawler configuration.
+- `docs/screenshot.png`: current website screenshot used in this repository and the profile README banner.
 
-## Getting Started
+## Local preview
 
-### Frontend (React)
+Serve the site root with a local HTTP server:
 
-1. Open the `frontend` directory:
+```sh
+python3 -m http.server 3000
+```
 
-   ```sh
-   cd frontend
-   npm start
-   ```
+The contact form uses its WhatsApp fallback on localhost. On the live `grupoinmarca.com` domains it posts JSON to `/backend/index.php`.
 
-### Backend (PHP)
+## Contact endpoint configuration
 
-1. Open the `backend` directory and start a PHP development server:
+The PHP endpoint requires PHP and PHPMailer. On the web server, copy the template to a private configuration file and enter the SMTP values provided by the hosting email service:
 
-   ```sh
-   cd backend
-   php -S localhost:8000
-   ```
+```sh
+cp backend/config.example.php backend/config.php
+```
 
----
+Edit `backend/config.php` on the server. Never commit it. The repository `.gitignore` excludes that file. The endpoint expects a JSON body with `nombre`, `email`, `telefono` and `mensaje`, and returns JSON with `success: true` only when PHPMailer accepts the message.
 
-## Project Details
+## Deploy to Hostinger
 
-Landing page for Grupo Inmarca, an official distributor and representative of Brazilian clothing brands in Costa Rica. The site includes institutional information, commercial details, contact functionality, and company policies.
+Upload the root files and folders into the domain's `public_html` directory. Keep the directory structure unchanged. Install `backend/config.php` on the server before enabling the contact form. Do not upload Git metadata or local dependency folders.
 
----
+## Privacy and analytics
 
-Developed by Nicolas Cartin Reyes, 2025.
+The page stores consent preferences in browser local storage and loads Google Maps only after external-content consent. GA4 remains disabled until a real Measurement ID is configured in `analytics-config.js` and the visitor grants analytics consent. No analytics identifier or SMTP secret is committed.
