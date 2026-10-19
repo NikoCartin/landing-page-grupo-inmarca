@@ -437,9 +437,17 @@ h1, h2, .mission-card h3, .brand-slide h3 { font-family: var(--font-display); }
   .site-nav a { font-size: 0.69rem; }
   .hero-shell { grid-template-columns: minmax(0, 0.95fr) minmax(350px, 1.05fr); gap: 2.5rem; }
   .hero-art { min-height: 465px; }
-  .brand-slide { grid-template-columns: minmax(235px, 0.8fr) minmax(0, 1.2fr); }
-  .brand-copy, .brand-gallery, .brand-gallery img { min-height: 370px; }
+  .brand-slide { grid-template-columns: minmax(210px, 0.62fr) minmax(0, 1.38fr); gap: 0.75rem; }
+  .brand-copy { min-height: 320px; padding: clamp(1.2rem, 2vw, 1.7rem); }
+  .brand-gallery, .brand-gallery img { min-height: 360px; }
+  .brand-logo-slot { max-width: 220px; height: 80px; margin-bottom: 0.8rem; }
+  .brand-description { font-size: 0.78rem; line-height: 1.6; }
+  .brand-category { margin-top: 1rem; }
   .commercial-inner, .legal-inner { gap: 3rem; }
+}
+@media (min-width: 621px) and (max-width: 1080px) {
+  .brand-copy { align-self: center; }
+  .brand-slide-melissa .brand-logo-slot { max-width: 240px; height: 90px; }
 }
 @media (max-width: 820px) {
   .utility-bar { justify-content: center; text-align: center; }
@@ -468,8 +476,13 @@ h1, h2, .mission-card h3, .brand-slide h3 { font-family: var(--font-display); }
   .values-block { grid-template-columns: 1fr 1.4fr; gap: 2.5rem; }
   .brands-header { align-items: start; flex-direction: column; gap: 1rem; }
   .brands-intro { max-width: 520px; }
-  .brand-slide { grid-template-columns: 0.8fr 1.2fr; }
-  .brand-copy, .brand-gallery, .brand-gallery img { min-height: 340px; }
+  .brand-slide { grid-template-columns: minmax(205px, 0.6fr) minmax(0, 1.4fr); gap: 0.65rem; }
+  .brand-copy { min-height: 300px; padding: 1.25rem; }
+  .brand-gallery, .brand-gallery img { min-height: 365px; }
+  .brand-logo-slot { max-width: 220px; height: 75px; margin-bottom: 0.65rem; }
+  .brand-description { font-size: 0.77rem; line-height: 1.55; }
+  .brand-category { margin-top: 0.9rem; }
+  .brand-slide-melissa .brand-gallery, .brand-slide-melissa .brand-gallery img { min-height: 365px; }
   .commercial-heading { position: static; }
   .contact-inner { align-items: start; }
   .contact-copy { max-width: 720px; }
@@ -513,13 +526,15 @@ h1, h2, .mission-card h3, .brand-slide h3 { font-family: var(--font-display); }
   .audience-card { grid-template-columns: 30px 1fr 20px; gap: 0.6rem; }
   .brands-inner { padding-top: 4.8rem; padding-bottom: 4.5rem; }
   .brands-header h2 { font-size: clamp(2.6rem, 11vw, 4rem); }
-  .brand-slide { grid-template-columns: 1fr; gap: 0.7rem; }
-  .brand-copy { min-height: auto; padding: 1.4rem; }
-  .brand-logo-slot { max-width: 240px; height: 90px; margin-bottom: 0.8rem; }
-  .brand-description { max-width: 430px; }
-  .brand-category { margin-top: 1rem; }
-  .brand-gallery { min-height: 310px; grid-template-columns: 1.05fr 0.95fr; gap: 0.55rem; }
-  .brand-gallery img { min-height: 310px; }
+  .brand-slide { grid-template-columns: 1fr; grid-template-rows: max-content minmax(0, 1fr); align-items: start; gap: 0.5rem; }
+  .brand-copy { min-height: auto; align-self: start; padding: 0.9rem 1rem; border-radius: 1rem; }
+  .brand-logo-slot { max-width: 220px; height: 68px; margin-bottom: 0.35rem; }
+  .brand-slide-melissa .brand-logo-slot { max-width: 240px; height: 78px; }
+  .brand-description { max-width: 100%; font-size: 0.75rem; line-height: 1.45; }
+  .brand-category { margin-top: 0.55rem; padding: 0.33rem 0.58rem; font-size: 0.56rem; }
+  .brand-gallery { min-height: 360px; grid-template-columns: 1.05fr 0.95fr; gap: 0.45rem; }
+  .brand-gallery img { min-height: 360px; }
+  .brand-slide-melissa .brand-gallery, .brand-slide-melissa .brand-gallery img { min-height: 360px; }
   .brand-gallery figure { border-radius: 0.95rem; }
   .brand-slide-lunender .brand-gallery { min-height: 0; grid-template-columns: 1fr; align-items: start; }
   .brand-slide-lunender .brand-image-main { width: min(100%, 360px); margin-inline: auto; }
