@@ -67,11 +67,22 @@
       }, 3000);
     };
 
+    const syncMobileHeight = () => {
+      if (!viewport) return;
+      if (window.innerWidth > 620) {
+        viewport.style.removeProperty("--brand-active-height");
+        return;
+      }
+      const height = slides[currentIndex]?.getBoundingClientRect().height;
+      if (height > 0) viewport.style.setProperty("--brand-active-height", `${height}px`);
+    };
+
     const updateControls = (index) => {
       currentIndex = Math.max(0, Math.min(index, slides.length - 1));
       if (status) status.textContent = `Marca actual: ${slideName(slides[currentIndex])}`;
       dots.forEach((dot, dotIndex) => dot.setAttribute("aria-current", dotIndex === currentIndex ? "true" : "false"));
       if (progress) progress.style.width = `${((currentIndex + 1) / slides.length) * 100}%`;
+      syncMobileHeight();
     };
 
     const goTo = (index, automatic = false) => {
@@ -171,6 +182,14 @@
         scheduleRotation();
       });
     }, { passive: true });
+
+    window.addEventListener("resize", syncMobileHeight);
+    if ("ResizeObserver" in window) {
+      const slideSizeObserver = new ResizeObserver(syncMobileHeight);
+      slides.forEach((slide) => slideSizeObserver.observe(slide));
+    } else {
+      slider.querySelectorAll("img").forEach((image) => image.addEventListener("load", syncMobileHeight));
+    }
 
     updateControls(0);
     scheduleRotation();
