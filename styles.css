@@ -311,6 +311,7 @@ h1, h2, .mission-card h3, .brand-slide h3 { font-family: var(--font-display); }
 .brand-slide-melissa .brand-gallery { min-height: 0; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .brand-slide-melissa .brand-gallery img { min-height: 0; object-fit: contain; }
 .brand-slide-melissa .brand-gallery figure:hover img { transform: none; }
+.brand-slide-melissa .brand-logo-slot { max-width: 320px; height: 130px; }
 .brand-slide-melissa .brand-category:hover { text-decoration: underline; text-underline-offset: 3px; }
 .slider-footer { display: grid; grid-template-columns: minmax(110px, 1fr) auto; align-items: center; gap: 1.5rem; margin-top: 1rem; }
 .slider-progress { height: 2px; overflow: hidden; background: rgba(255,255,255,0.25); }
@@ -324,7 +325,7 @@ h1, h2, .mission-card h3, .brand-slide h3 { font-family: var(--font-display); }
 .melissa-feature-inner { position: relative; width: min(100%, 1440px); margin: 0 auto; padding: clamp(4.5rem, 8vw, 7.5rem) var(--gutter); display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); align-items: center; gap: clamp(2.5rem, 6vw, 6rem); }
 .melissa-feature-copy { position: relative; z-index: 1; max-width: 670px; }
 .melissa-feature-eyebrow { margin: 0 0 1.15rem; color: #ffd0ae; font-size: 0.64rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; }
-.melissa-feature-logo { display: block; width: min(100%, 200px); height: auto; margin: 0 0 1.55rem; border-radius: 0.45rem; }
+.melissa-feature-logo { display: block; width: min(100%, 340px); height: auto; margin: 0 0 1.8rem; filter: brightness(0) invert(1); }
 .melissa-feature h2 { max-width: 650px; margin: 0; font-family: var(--font-display); font-size: clamp(2.75rem, 4.8vw, 5rem); font-weight: 600; letter-spacing: -0.05em; line-height: 1.02; }
 .melissa-feature-lead { margin: 1.2rem 0 0; color: #ffd0ae; font-size: 0.98rem; font-weight: 700; }
 .melissa-feature-copy > p:not(.melissa-feature-eyebrow):not(.melissa-feature-lead) { max-width: 540px; margin: 0.8rem 0 0; color: rgba(255,255,255,0.88); font-size: 0.87rem; line-height: 1.85; }
