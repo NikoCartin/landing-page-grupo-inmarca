@@ -313,6 +313,12 @@ h1, h2, .mission-card h3, .brand-slide h3 { font-family: var(--font-display); }
 .brand-slide-melissa .brand-gallery figure:hover img { transform: none; }
 .brand-slide-melissa .brand-logo-slot { max-width: 320px; height: 130px; }
 .brand-slide-melissa .brand-category:hover { text-decoration: underline; text-underline-offset: 3px; }
+.brand-slide-lunender .brand-logo-slot { max-width: 320px; }
+.brand-slide-lunender .brand-logo-slot img { filter: brightness(0); }
+.brand-slide-lunender .brand-gallery { min-height: 410px; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); align-items: center; }
+.brand-slide-lunender .brand-image-main { aspect-ratio: 1365 / 2048; }
+.brand-slide-lunender .brand-image-secondary { aspect-ratio: 2048 / 1365; }
+.brand-slide-lunender .brand-gallery img { height: 100%; min-height: 0; object-fit: cover; }
 .slider-footer { display: grid; grid-template-columns: minmax(110px, 1fr) auto; align-items: center; gap: 1.5rem; margin-top: 1rem; }
 .slider-progress { height: 2px; overflow: hidden; background: rgba(255,255,255,0.25); }
 .slider-progress span { display: block; width: 7.69%; height: 100%; background: #d0ecac; transition: width 240ms ease; }
@@ -513,6 +519,10 @@ h1, h2, .mission-card h3, .brand-slide h3 { font-family: var(--font-display); }
   .brand-gallery { min-height: 310px; grid-template-columns: 1.05fr 0.95fr; gap: 0.55rem; }
   .brand-gallery img { min-height: 310px; }
   .brand-gallery figure { border-radius: 0.95rem; }
+  .brand-slide-lunender .brand-gallery { min-height: 0; grid-template-columns: 1fr; align-items: start; }
+  .brand-slide-lunender .brand-image-main { width: min(100%, 360px); margin-inline: auto; }
+  .brand-slide-lunender .brand-image-secondary { width: 100%; }
+  .brand-slide-lunender .brand-gallery img { height: 100%; min-height: 0; }
   .slider-footer { grid-template-columns: 1fr; gap: 0.8rem; }
   .slider-dots { justify-content: center; gap: 0.4rem; }
   .slider-instruction { text-align: center; }
